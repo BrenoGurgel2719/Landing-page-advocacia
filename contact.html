@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contato — Novus Ordo S.A</title>
+  <meta name="description"
+    content="Agende um diagnóstico gratuito com nossa equipe. Sem compromisso. Retorno em até 24 horas.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://novusordo.com/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://novusordo.com/contact.html">
+  <meta property="og:title" content="Contato — Agende seu Diagnóstico Gratuito | Novus Ordo">
+  <meta property="og:description" content="Agende um diagnóstico gratuito com nossos especialistas. Sem compromisso.">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.avif">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap">
+  </noscript>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
+
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 100 900;
+      src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url("fonts/Inter-Italic.woff2") format('woff2');
+      font-weight: 100 900;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/subset-Inter-Regular.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET & VARIABLES
+    ════════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--gold);
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 700;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       LAYOUT BASE
+    ════════════════════════════════════════════ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    main>section {
+      padding: clamp(120px, 15vh, 180px) 0;
+      position: relative;
+    }
+
+    .section-break {
+      height: 12vh;
+      min-height: 120px;
+      pointer-events: none;
+    }
+
+    .section-full {
+      display: flex;
+      align-items: center;
+    }
+
+    .novus-concept,
+    .results-stats,
+    .mockup-section,
+    .cta-section {
+      overflow: hidden;
+    }
+
+    .cta-section {
+      content-visibility: auto;
+      contain-intrinsic-size: 0 600px;
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO & NAVBAR (Omitted unnecessary duplications, kept essential)
+    ════════════════════════════════════════════ */
+    #network-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-color: var(--bg);
+      display: flex;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1200px, calc(100% - 40px));
+      z-index: 1000;
+      border-radius: 20px;
+      background: rgba(5, 5, 5, 0.55);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      overflow: hidden;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      gap: 20px;
+      box-sizing: border-box;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 1;
+      min-width: 0;
+    }
+
+    .nav-logo .logo-mark {
+      font-size: 1.1rem;
+      color: var(--gold);
+      animation: shine 5s linear infinite;
+      background: linear-gradient(to right, #b38900 20%, #ffdb6e 40%, #ffdb6e 60%, #b38900 80%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-logo .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .nav-logo .logo-text strong {
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 7px 14px;
+      border-radius: 10px;
+      letter-spacing: 0.3px;
+      transition: all 0.25s ease;
+      position: relative;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-link.active {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+      background: linear-gradient(135deg, #ffcc33 0%, #b38900 100%);
+      padding: 9px 20px;
+      border-radius: 12px;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(179, 137, 0, 0.25);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(179, 137, 0, 0.45);
+    }
+
+    .nav-cta-dot {
+      width: 6px;
+      height: 6px;
+      background: #000;
+      border-radius: 50%;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color 0.3s;
+    }
+
+    .nav-toggle:hover {
+      border-color: var(--gold);
+    }
+
+    .bar {
+      width: 16px;
+      height: 1.5px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 2px;
+      transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+      display: block;
+    }
+
+    .nav-toggle.open .bar:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .nav-toggle.open .bar:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav-toggle.open .bar:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.23, 1, 0.32, 1), padding 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 400px;
+      padding-bottom: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 12px 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-link {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-link-cta {
+      color: var(--gold) !important;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-container {
+        padding: 10px 14px;
+        gap: 12px;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 900px) {
+      .nav-toggle {
+        display: flex;
+      }
+    }
+
+    :root {
+      --gold: #C9A227;
+      --gold-light: #FFD700;
+      --gold-dim: rgba(201, 162, 39, 0.15);
+      --text-secondary: rgba(255, 255, 255, 0.6);
+      --bg-card: #111111;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+    }
+
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal-up.show,
+    .reveal-left.show,
+    .reveal-right.show {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      min-height: 52vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #000;
+      padding: 140px 24px 80px;
+      text-align: center;
+    }
+
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(201, 162, 39, 0.07) 0%, transparent 70%), radial-gradient(ellipse 30% 40% at 20% 80%, rgba(201, 162, 39, 0.04) 0%, transparent 60%);
+    }
+
+    .page-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(201, 162, 39, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201, 162, 39, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    }
+
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .page-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 162, 39, 0.08);
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      color: var(--gold-light);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .page-hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 .gold {
+      background: linear-gradient(to right, #b38900 0%, #ffdb6e 40%, #ffdb6e 60%, #b38900 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero p {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 1.3vw, 1.1rem);
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.2), transparent);
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--gold-light);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      border-radius: 100px;
+      background: rgba(201, 162, 39, 0.06);
+      margin-bottom: 24px;
+    }
+
+    /* ── MAIN CONTACT GRID ── */
+    .contact-section {
+      padding: 100px 24px;
+      background: #000;
+    }
+
+    .contact-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* ── LEFT: Info + offices ── */
+    .contact-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .contact-info-col h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .contact-info-col h2 .gold {
+      background: linear-gradient(to right, #b38900 0%, #ffdb6e 50%, #b38900 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .contact-info-col>p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    /* Novo Botão de WhatsApp Prominente */
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #25D366;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 18px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-whatsapp:hover {
+      background: #20BA59;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+      color: #fff;
+    }
+
+    .btn-whatsapp i {
+      font-size: 1.4rem;
+    }
+
+    /* Direct contact */
+    .direct-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .direct-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .direct-contact-item:hover {
+      border-color: rgba(201, 162, 39, 0.25);
+    }
+
+    .dci-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(201, 162, 39, 0.08);
+      border: 1px solid rgba(201, 162, 39, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .dci-body {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dci-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .dci-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 500;
+    }
+
+    /* Offices */
+    .offices-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 16px;
+    }
+
+    .offices-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    /* Ajustado para coluna única (só SP) */
+    .office-card {
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.3s ease;
+    }
+
+    .office-card:hover {
+      border-color: rgba(201, 162, 39, 0.2);
+    }
+
+    .office-card .office-city {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .office-card .office-address {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.5;
+    }
+
+    .office-card .office-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #27c840;
+      display: inline-block;
+      margin-right: 6px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 8px rgba(39, 200, 64, 0.6);
+    }
+
+    /* ── RIGHT: Contact form ── */
+    .contact-form-card {
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      padding: 44px 40px;
+      position: sticky;
+      top: 120px;
+    }
+
+    .form-card-header {
+      margin-bottom: 32px;
+    }
+
+    .form-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(39, 200, 64, 0.08);
+      border: 1px solid rgba(39, 200, 64, 0.2);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: #27c840;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .form-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #27c840;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    .form-card-header h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .form-card-header p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 13px 16px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      transition: border-color 0.2s ease, background 0.2s ease;
+      outline: none;
+      appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.22);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(201, 162, 39, 0.4);
+      background: rgba(201, 162, 39, 0.04);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .select-wrapper {
+      position: relative;
+    }
+
+    .select-wrapper select {
+      cursor: pointer;
+    }
+
+    .select-wrapper i {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 0.7rem;
+      pointer-events: none;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(201, 162, 39, 0.3);
+    }
+
+    .form-disclaimer {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.3);
+      text-align: center;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .form-success {
+      text-align: center;
+      padding: 32px 0;
+    }
+
+    .success-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(39, 200, 64, 0.1);
+      border: 1px solid rgba(39, 200, 64, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: #27c840;
+      font-size: 1.4rem;
+    }
+
+    .form-success h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .form-success p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.7;
+    }
+
+    /* ── FAQ MINI ── */
+    .faq-section {
+      padding: 80px 24px 100px;
+      background: #080808;
+    }
+
+    .faq-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-inner h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq-item.open {
+      border-color: rgba(201, 162, 39, 0.2);
+    }
+
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      background: rgba(201, 162, 39, 0.1);
+      border-color: rgba(201, 162, 39, 0.3);
+      color: var(--gold-light);
+      transform: rotate(45deg);
+    }
+
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-body.open {
+      max-height: 300px;
+    }
+
+    .faq-body-inner {
+      padding: 0 24px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 960px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .contact-form-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .offices-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-card {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contato Novus Ordo S.A",
+    "url": "https://novusordo.com/contact.html",
+    "description": "Agende uma chamada estratégica gratuita com nossa equipe digital."
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-logo" aria-label="Novus Ordo — página inicial">
+        <span class="logo-mark" aria-hidden="true">✦</span>
+        <span class="logo-text">Novus <strong>Ordo</strong></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="about.html" class="nav-link">Sobre</a></li>
+        <li><a href="index.html#services" class="nav-link">Serviços</a></li>
+        <li><a href="index.html#metrics" class="nav-link">Métricas</a></li>
+        <li><a href="index.html#cases" class="nav-link">Cases</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Contato</a></li>
+      </ul>
+
+      <a href="contact.html" class="nav-cta" aria-label="Falar com um especialista">
+        Falar com especialista
+        <span class="nav-cta-dot" aria-hidden="true"></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="about.html" class="mobile-link">Sobre</a></li>
+        <li><a href="index.html#services" class="mobile-link">Serviços</a></li>
+        <li><a href="index.html#metrics" class="mobile-link">Métricas</a></li>
+        <li><a href="index.html#cases" class="mobile-link">Cases</a></li>
+        <li><a href="contact.html" class="mobile-link mobile-link-cta">Falar com especialista →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero" role="banner">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-grid" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">
+        <span aria-hidden="true">✦</span> Entre em Contato
+      </div>
+      <h1>Inicie Seu<br><span class="gold">Projeto Digital.</span></h1>
+      <p>Fale diretamente com nossos especialistas. Sem compromisso. Vamos analisar sua estrutura atual e definir a melhor estratégia para o seu próximo passo.</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div class="contact-grid">
+
+        <!-- ── LEFT: Info ── -->
+        <div class="contact-info-col">
+          <div class="reveal-left">
+            <span class="section-label">Contato Direto</span>
+            <h2 id="contact-title">
+              Respondemos a todos os contatos em até <span class="gold">24 horas.</span>
+            </h2>
+            <p>Pronto para construir uma presença digital de alta performance? Seja qual for a demanda — solução produtizada, rastreamento ou desenvolvimento sob medida —, nossa equipe está online.</p>
+          </div>
+
+          <!-- BOTÃO WHATSAPP PROMINENTE -->
+          <a href="https://wa.me/5511999999999" class="btn-whatsapp reveal-left" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
+          </a>
+
+          <div class="direct-contacts reveal-left">
+            <a href="mailto:contact@novusordo.com" class="direct-contact-item" aria-label="Enviar e-mail para a Novus Ordo">
+              <div class="dci-icon" aria-hidden="true">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="dci-body">
+                <span class="dci-label">E-mail</span>
+                <span class="dci-value">contact@novusordo.com</span>
+              </div>
+            </a>
+
+            <!-- Removido telefone redundante devido ao destaque do WhatsApp -->
+
+            <a href="#" class="direct-contact-item" aria-label="Novus Ordo no LinkedIn" target="_blank"
+              rel="noopener noreferrer">
+              <div class="dci-icon" aria-hidden="true">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="dci-body">
+                <span class="dci-label">LinkedIn</span>
+                <span class="dci-value">linkedin.com/company/novusordo</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="reveal-left">
+            <p class="offices-title">Nosso Escritório</p>
+            <div class="offices-grid">
+
+              <!-- APENAS ESCRITÓRIO BRASILEIRO -->
+              <div class="office-card">
+                <span class="office-dot" aria-hidden="true"></span>
+                <p class="office-city">São Paulo</p>
+                <p class="office-address">Av. Brigadeiro Faria Lima<br>3900, 14º Andar<br>São Paulo, SP 04538</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ── RIGHT: Form ── -->
+        <div class="contact-form-card reveal-right">
+
+          <div class="form-card-header">
+            <div class="form-badge">
+              <span class="form-badge-dot" aria-hidden="true"></span>
+              Diagnóstico técnico gratuito
+            </div>
+            <h2>Vamos mapear sua<br>estratégia digital</h2>
+            <p>Preencha o formulário abaixo e entraremos em contato via WhatsApp ou E-mail em até 24 horas.</p>
+          </div>
+
+          <div id="contact-form" role="form" aria-label="Formulário de contato e agendamento">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-name">Nome completo *</label>
+                <input type="text" id="c-name" name="name" placeholder="João Silva" autocomplete="name" required>
+              </div>
+              <div class="form-group">
+                <label for="c-company">Empresa *</label>
+                <input type="text" id="c-company" name="company" placeholder="Sua marca" autocomplete="organization"
+                  required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-role">Cargo</label>
+                <input type="text" id="c-role" name="role" placeholder="CEO / Fundador">
+              </div>
+              <div class="form-group">
+                <label for="c-phone">WhatsApp / Telefone *</label>
+                <input type="tel" id="c-phone" name="phone" placeholder="+55 (11) 90000-0000" autocomplete="tel"
+                  required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="c-email">E-mail corporativo *</label>
+              <input type="email" id="c-email" name="email" placeholder="joao@empresa.com.br" autocomplete="email"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="c-revenue">Orçamento do Projeto *</label>
+              <div class="select-wrapper">
+                <select id="c-revenue" name="revenue" required>
+                  <option value="" disabled selected>Selecione uma estimativa</option>
+                  <option value="under-25k">Abaixo de R$ 25k</option>
+                  <option value="25-50k">R$ 25k – R$ 50k</option>
+                  <option value="50-125k">R$ 50k – R$ 125k</option>
+                  <option value="125k+">Acima de R$ 125k</option>
+                </select>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="c-subject">Qual serviço você precisa?</label>
+              <div class="select-wrapper">
+                <select id="c-subject" name="subject">
+                  <option value="" disabled selected>Selecione o serviço principal</option>
+                  <option value="productized">Serviço Produtizado (LP + Rastreamento)</option>
+                  <option value="web-dev">Desenvolvimento Web Personalizado</option>
+                  <option value="tracking">Rastreamento Avançado de Dados (GTM/GA4)</option>
+                  <option value="traffic">Gestão de Tráfego / Anúncios</option>
+                  <option value="other">Outro</option>
+                </select>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="c-message">Contexto (opcional)</label>
+              <textarea id="c-message" name="message"
+                placeholder="Descreva brevemente sua estrutura atual, objetivos ou principais gargalos..." rows="3"></textarea>
+            </div>
+
+            <button type="button" class="form-submit" id="contact-submit-btn">
+              <span>Enviar Solicitação</span>
+              <span aria-hidden="true">→</span>
+            </button>
+
+            <p class="form-disclaimer">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              Seus dados são estritamente confidenciais e nunca serão compartilhados.
+            </p>
+
+          </div>
+
+          <!-- Success state -->
+          <div class="form-success" id="contact-success" hidden aria-live="polite">
+            <div class="success-icon" aria-hidden="true">
+              <i class="fas fa-check"></i>
+            </div>
+            <h3>Solicitação recebida!</h3>
+            <p>Nossa equipe entrará em contato em até <strong>24 horas</strong> via WhatsApp ou E-mail.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════════════════
+         FAQ MINI
+    ════════════════════════════════════════════ -->
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="faq-inner">
+        <h2 id="faq-title">Trabalhando Conosco</h2>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Como funciona o processo de contratação e onboarding?</span>
+              <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Após o contato via WhatsApp ou formulário, agendamos uma rápida chamada de diagnóstico gratuita. Mapeamos suas necessidades, alinhamos os requisitos técnicos (como estrutura HTML ou tags GTM) e enviamos uma proposta formal. Após aprovação, estabelecemos um canal seguro de comunicação e iniciamos o projeto imediatamente.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>O que está incluído no pacote de Serviço Produtizado?</span>
+              <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Nosso Serviço Produtizado padrão inclui uma landing page HTML de alta performance e personalizada (pontuação 100/100 no PageSpeed), configuração completa de infraestrutura DNS e SSL, e integração avançada de rastreamento server-side/client-side (GTM, GA4, Meta Pixel) para que você esteja pronto para escalar tráfego pago imediatamente.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Quanto tempo leva para entregar um projeto completo?</span>
+              <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Os prazos dependem do escopo. Um Serviço Produtizado padrão (Landing Page + Rastreamento de Dados) geralmente leva de 2 a 3 semanas do kickoff até o lançamento final. Frentes SaaS customizadas ou páginas institucionais complexas levam mais tempo e são escopadas individualmente durante a fase de diagnóstico.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>O que preciso fornecer para iniciar o projeto?</span>
+              <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Precisaremos dos seus materiais de marca (logos, tipografia, cores principais), o copywriting central da página e permissões de acesso ao seu registrador de domínio e plataformas de rastreamento (como Google Analytics e Tag Manager) para implementar o data layer corretamente.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Vocês oferecem manutenção e suporte pós-lançamento?</span>
+              <span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Sim. Todo projeto inclui um período de garantia de 30 dias para correções e ajustes menores, assegurando performance perfeita em ambiente real. Para demandas contínuas, oferecemos contratos de retenção que cobrem gestão contínua de tráfego, atualizações iterativas de design e auditorias de rastreamento.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+
+    <!-- Top decorative glow line -->
+    <div class="footer-glow" aria-hidden="true"></div>
+
+    <div class="footer-container">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <a href="#" class="footer-logo" aria-label="Início">
+          <span class="logo-mark" aria-hidden="true">✦</span>
+          <span class="logo-text">Advocacia <strong>Tributária</strong></span>
+        </a>
+        <p class="footer-tagline">Especialistas em recuperação de créditos e defesa fiscal. Sigilo profissional
+          garantido.</p>
+
+        <!-- Social networks -->
+        <div class="footer-social" aria-label="Redes sociais">
+          <a href="#" class="social-link" aria-label="Siga no Instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Siga no LinkedIn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Envie WhatsApp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Services -->
+      <nav class="footer-nav" aria-label="Links de serviços">
+        <h4 class="footer-nav-title">Serviços</h4>
+        <ul role="list">
+          <li><a href="#services">Recuperação de Créditos</a></li>
+          <li><a href="#services">Defesa em Autuações</a></li>
+          <li><a href="#services">Planejamento Tributário</a></li>
+          <li><a href="#services">Parcelamento / Transação</a></li>
+          <li><a href="#services">Consultoria M&A</a></li>
+        </ul>
+      </nav>
+
+      <!-- Column 3: Company -->
+      <nav class="footer-nav" aria-label="Links da empresa">
+        <h4 class="footer-nav-title">Empresa</h4>
+        <ul role="list">
+          <li><a href="about.html">Sobre Nós</a></li>
+          <li><a href="#cases">Casos de Sucesso</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="#metrics">Resultados</a></li>
+        </ul>
+      </nav>
+
+      <!-- Column 4: Contact / CTA -->
+      <div class="footer-contact">
+        <h4 class="footer-nav-title">Contato</h4>
+        <p class="footer-contact-desc">Pronto para recuperar seus direitos? Fale com um de nossos especialistas.</p>
+        <a href="contact.html" class="footer-cta">
+          Agendar consulta →
+        </a>
+        <div class="footer-contact-info">
+          <p>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:contato@advocacia.com">contato@advocacia.com</a>
+          </p>
+          <p>
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            (11) 3000-0000
+          </p>
+          <p>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            São Paulo, SP — Brasil
+          </p>
+          <p style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 8px;">
+            OAB/SP nº 0000.000
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar: copyright + legal links -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">
+          &copy; <span id="footer-year"></span> Novus Ordo. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="#">Terms of Use</a>
+          <span aria-hidden="true">·</span>
+          <a href="#">Compliance</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({ duration: 1.6, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    const toggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+    });
+
+    const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (!e.isIntersecting) return;
+        setTimeout(() => e.target.classList.add('show'), (i % 4) * 100);
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => obs.observe(el));
+
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function () {
+        const item = this.closest('.faq-item');
+        const body = item.querySelector('.faq-body');
+        const isOpen = item.classList.contains('open');
+
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          if (openItem === item) return;
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-body').classList.remove('open');
+          openItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        item.classList.toggle('open', !isOpen);
+        body.classList.toggle('open', !isOpen);
+        this.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+
+    document.getElementById('contact-submit-btn').addEventListener('click', function () {
+      const form = document.getElementById('contact-form');
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = 'rgba(255,82,82,0.5)';
+          field.addEventListener('input', () => field.style.borderColor = '', { once: true });
+        }
+      });
+
+      if (!valid) return;
+
+      form.style.display = 'none';
+      document.getElementById('contact-success').hidden = false;
+    });
+
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>
