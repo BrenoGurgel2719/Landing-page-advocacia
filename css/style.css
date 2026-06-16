@@ -1049,52 +1049,129 @@ main>section {
 /* Logos de Confiança */
 .trust-logos-wrapper {
   text-align: center;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 8px;
+}
+
+/* Fade lateral nas bordas */
+.trust-logos-wrapper::before,
+.trust-logos-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.trust-logos-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.trust-logos-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #000 0%, transparent 100%);
 }
 
 .trust-label {
   font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-}
-
-.logos-track {
+  letter-spacing: 3px;
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(30px, 6vw, 80px);
-  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.trust-label::before,
+.trust-label::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(179, 137, 0, 0.35));
+}
+
+.trust-label::after {
+  background: linear-gradient(to left, transparent, rgba(179, 137, 0, 0.35));
+}
+
+/* Faixa rolante */
+.logos-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: marquee-logos 22s linear infinite;
+}
+
+.logos-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-logos {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Cada item */
+.logo-item {
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  position: relative;
+}
+
+/* Separador dourado entre logos */
+.logo-item::after {
+  content: '✦';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.45rem;
+  color: rgba(179, 137, 0, 0.4);
+  line-height: 1;
 }
 
 .logo-item img {
-  max-height: 40px;
+  max-height: 36px;
   width: auto;
-  opacity: 0.5;
-  filter: grayscale(100%) contrast(1.2);
-  transition: all 0.4s ease;
+  opacity: 0.45;
+  filter: grayscale(100%) brightness(1.4);
+  transition: opacity 0.4s ease, filter 0.4s ease;
+  display: block;
 }
 
 .logo-item:hover img {
-  opacity: 1;
-  filter: grayscale(0%) contrast(1);
-  transform: translateY(-2px);
+  opacity: 0.85;
+  filter: grayscale(0%) brightness(1);
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .logos-track {
-    gap: 40px;
+  .logo-item {
+    padding: 0 32px;
   }
 
   .logo-item img {
-    max-height: 35px;
+    max-height: 28px;
+  }
+
+  .trust-logos-wrapper::before,
+  .trust-logos-wrapper::after {
+    width: 60px;
   }
 }
 
