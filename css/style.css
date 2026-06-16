@@ -1159,6 +1159,95 @@ main>section {
   filter: grayscale(0%) brightness(1);
 }
 
+/* ─── Logo Badges Tipográficos ───────────────────────────────── */
+
+.logo-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  user-select: none;
+  gap: 2px;
+}
+
+.lb-prefix,
+.lb-suffix {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.lb-main {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+/* OAB — azul institucional */
+.logo-oab .lb-main {
+  color: #1a4fa0;
+}
+
+.logo-oab .lb-prefix,
+.logo-oab .lb-suffix {
+  color: #1a4fa0;
+}
+
+/* IBDP — cinza-azulado neutro */
+.logo-ibdp .lb-main {
+  color: #8899bb;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.logo-ibdp .lb-suffix {
+  color: #8899bb;
+}
+
+/* Migalhas — laranja-vermelho */
+.logo-migalhas .lb-main {
+  color: #e84e0f;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+}
+
+/* JOTA — vermelho institucional */
+.logo-jota .lb-main {
+  color: #d0021b;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
+
+/* G1 — vermelho Globo */
+.logo-g1 .lb-main {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+}
+
+.logo-g1 .lb-accent {
+  color: #e8000d;
+}
+
+/* Hover: levanta a opacidade geral do item */
+.logo-item:hover .logo-badge {
+  opacity: 1;
+}
+
+.logo-item .logo-badge {
+  opacity: 0.65;
+  transition: opacity 0.35s ease;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .logo-item {
@@ -1174,6 +1263,7 @@ main>section {
     width: 60px;
   }
 }
+
 
 /* ═══════════════════════════════════════════
    SUCCESS STORIES
